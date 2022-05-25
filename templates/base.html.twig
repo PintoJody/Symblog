@@ -16,8 +16,13 @@
     <div class="flex justify-between container max-w-screen-xl px-8 items-center">
         <a href="{{path('app_home')}}"><h1 class="p-5 text-4xl text-white">Symblog</h1></a>
         <ul class="flex justify-between gap-6">
+        {% if is_granted('ROLE_USER') %}
+            <a href="{{ path('app_profile') }}"><li class="btn-primary">Profil</li></a>
+            <a href="{{ path('app_logout') }}"><li class="btn-primary">Deconnexion</li></a>
+        {% else %}
             <a href="{{path('app_login')}}"><li class="btn-primary">Connexion</li></a>
             <a href="{{path('app_register')}}"><li class="btn-primary">Inscription</li></a>
+        {% endif %}
         </ul>
     </div>
 </nav>

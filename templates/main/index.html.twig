@@ -4,6 +4,46 @@
 
 {% block body %}
 
-    <h1>Accueil</h1>
+<div class="container max-w-5xl mx-auto px-3">
+    <h1 class="p-5 border-b text-center text-xl font-bold border-black">Derniers articles</h1>
+
+    <div class="py-5 flex flex-row justify-between flex-wrap">
+        <div class="container max-w-xs flex flex-col">
+            <img class="w-max" src="{{asset('img/eso1907a.jpg')}}" alt="Premier trou noir">
+            <div class="bg-gray-200 p-2 flex flex-col gap-1">
+                <h2>Titre de l'article</h2>
+                <p>Posté le 25/05/2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perferendis sed adipisci hic 
+                sapiente corporis aliquid numquam qui minima amet ... <a class="text-blue-400" href="">Voir plus</a></p>
+            </div>
+        </div>
+
+        <div class="container max-w-xs flex flex-col">
+            <img src="{{asset('img/eso1907a.jpg')}}" alt="Premier trou noir">
+            <div class="bg-gray-200 p-2 flex flex-col gap-1">
+                <h2>Titre de l'article</h2>
+                <p>Posté le 25/05/2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perferendis sed adipisci hic 
+                sapiente corporis aliquid numquam qui minima amet ... <a class="text-blue-400" href="">Voir plus</a></p>
+            </div>
+        </div>
+
+
+        <div class="container max-w-xs flex flex-col">
+            <img src="{{asset('img/eso1907a.jpg')}}" alt="Premier trou noir">
+            <div class="bg-gray-200 p-2 flex flex-col gap-1">
+                <h2>Titre de l'article</h2>
+                <p>Posté le 25/05/2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perferendis sed adipisci hic 
+                sapiente corporis aliquid numquam qui minima amet ... <a class="text-blue-400" href="">Voir plus</a></p>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
 
 {% endblock %}
