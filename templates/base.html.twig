@@ -5,15 +5,23 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+        <link rel="stylesheet" href="{{asset("build/app.css")}}">
+        {% block stylesheets %}{% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
+        {% block javascripts %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+<nav class="bg-gray-400">
+    <div class="flex justify-between container max-w-screen-xl px-8 items-center">
+        <a href="{{path('app_home')}}"><h1 class="p-5 text-4xl text-white">Symblog</h1></a>
+        <ul class="flex justify-between gap-6">
+            <a href="{{path('app_login')}}"><li class="btn-primary">Connexion</li></a>
+            <a href="{{path('app_register')}}"><li class="btn-primary">Inscription</li></a>
+        </ul>
+    </div>
+</nav>
+
+    {% block body %}{% endblock %}
     </body>
 </html>
